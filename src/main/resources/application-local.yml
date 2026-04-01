@@ -48,3 +48,12 @@ app:
 
 encryption:
   secret: ${ENCRYPTION_SECRET}
+
+server:
+  servlet:
+    session:
+      cookie:
+        same-site: none
+        secure: true
+        http-only: true
+        name: REMITTI_SESSION
