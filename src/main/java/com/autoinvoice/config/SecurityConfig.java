@@ -43,7 +43,8 @@ public class SecurityConfig {
         // Allow both localhost and 127.0.0.1 with any port (useful for dev)
         config.setAllowedOriginPatterns(List.of(
             "http://localhost:[*]",
-            "http://127.0.0.1:[*]"
+            "http://127.0.0.1:[*]",
+            "https://remiti.up.railway.app:[*]"
         ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         config.setAllowedHeaders(List.of("*"));
