@@ -1,0 +1,84 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.autoinvoice:autoinvoice-agent >------------------
+[INFO] Building autoinvoice-agent 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.4:run (default-cli) > test-compile @ autoinvoice-agent >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ autoinvoice-agent ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ autoinvoice-agent ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ autoinvoice-agent ---
+[INFO] Copying 0 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ autoinvoice-agent ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.4:run (default-cli) < test-compile @ autoinvoice-agent <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.4:run (default-cli) @ autoinvoice-agent ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2026-03-26T16:25:03.210+01:00  INFO 34824 --- [           main] c.a.AutoinvoiceAgentApplication          : Starting AutoinvoiceAgentApplication using Java 22.0.1 with PID 34824 (C:\Users\23481\AntigravityProject\autoinvoice-agent\target\classes started by 23481 in C:\Users\23481\AntigravityProject\autoinvoice-agent)
+2026-03-26T16:25:03.216+01:00  INFO 34824 --- [           main] c.a.AutoinvoiceAgentApplication          : The following 1 profile is active: "local"
+2026-03-26T16:25:05.275+01:00  INFO 34824 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-26T16:25:05.467+01:00  INFO 34824 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170 ms. Found 3 JPA repository interfaces.
+2026-03-26T16:25:06.950+01:00  INFO 34824 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-26T16:25:06.987+01:00  INFO 34824 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-26T16:25:06.989+01:00  INFO 34824 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-03-26T16:25:07.198+01:00  INFO 34824 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-26T16:25:07.200+01:00  INFO 34824 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3864 ms
+2026-03-26T16:25:07.704+01:00  INFO 34824 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-26T16:25:07.864+01:00  INFO 34824 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-26T16:25:07.949+01:00  INFO 34824 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-26T16:25:08.621+01:00  INFO 34824 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-26T16:25:08.715+01:00  INFO 34824 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-26T16:25:09.178+01:00  INFO 34824 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@62b0bf85
+2026-03-26T16:25:09.181+01:00  INFO 34824 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-26T16:25:11.610+01:00  INFO 34824 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-26T16:25:11.715+01:00  INFO 34824 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-26T16:25:13.849+01:00  WARN 34824 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4b4d1115-38b8-4e5d-9088-456a33356453
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-26T16:25:14.102+01:00  INFO 34824 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1a61f634, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20a2930f, org.springframework.security.web.context.SecurityContextHolderFilter@255482cb, org.springframework.security.web.header.HeaderWriterFilter@6d911985, org.springframework.web.filter.CorsFilter@609edb55, org.springframework.security.web.csrf.CsrfFilter@577dac16, org.springframework.security.web.authentication.logout.LogoutFilter@7cf166db, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e30a8ef, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3829306d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@147892be, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2c02cf78, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@641255d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75d61b62, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13d1653, org.springframework.security.web.access.ExceptionTranslationFilter@77e1b84c, org.springframework.security.web.access.intercept.AuthorizationFilter@56fc2cea]
+2026-03-26T16:25:14.220+01:00  INFO 34824 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-26T16:25:14.242+01:00  INFO 34824 --- [           main] c.a.AutoinvoiceAgentApplication          : Started AutoinvoiceAgentApplication in 12.595 seconds (process running for 13.922)
+==== DATABASE CONFIG DEBUG ====
+DB URL = jdbc:postgresql://localhost:5433/autoinvoice
+DB USER = postgres
+DB PASS = yourpassword
+================================
+2026-03-26T16:31:38.387+01:00  INFO 34824 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-26T16:31:38.391+01:00  INFO 34824 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-26T16:31:38.406+01:00  INFO 34824 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  43:28 min
+[INFO] Finished at: 2026-03-26T17:08:22+01:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.2.4:run (default-cli) on project autoinvoice-agent: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
