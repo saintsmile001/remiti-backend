@@ -3,22 +3,21 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/autoinvoice
-    username: postgres
-    password: yourpassword
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
     ddl-auto: update
     show-sql: false
-    
 
 auth0:
   domain: ${AUTH0_DOMAIN}
   client-id: ${AUTH0_CLIENT_ID}
   client-secret: ${AUTH0_CLIENT_SECRET}
   audience: ${AUTH0_AUDIENCE}
-  login-redirect-uri: http://localhost:8080/api/session/callback
-  connection-redirect-uri: http://localhost:8080/api/auth/callback
+  login-redirect-uri: ${AUTH0_CALLBACK_URL}
+  connection-redirect-uri: ${AUTH0_CALLBACK_URL}
 
 gmail:
   client-id: ${GOOGLE_CLIENT_ID}
@@ -43,9 +42,9 @@ openai:
 agent:
   approval-threshold-ngn: 150000
   scan-interval-ms: 900000
-  
+
 app:
-  frontend-url: http://localhost:5173
+  frontend-url: ${FRONTEND_URL}
 
 encryption:
   secret: ${ENCRYPTION_SECRET}

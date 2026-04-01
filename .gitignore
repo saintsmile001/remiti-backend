@@ -1,0 +1,8 @@
+.env
+target/
+*.class
+.DS_Store
+auth0-token.txt
+.vscode/
+.idea/
+.agents/

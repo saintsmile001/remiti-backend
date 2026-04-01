@@ -3,49 +3,48 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/autoinvoice
-    username: postgres
-    password: yourpassword
-
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: true
-    open-in-view: false
+    ddl-auto: update
+    show-sql: false
 
 auth0:
-  domain: dev-flbjrn2syifzgmfm.us.auth0.com
-  client-id: C8mXmQpOKs5DRdPDheXiiHVPKrMrlIVe
-  client-secret: -AkFWPvio8kZCjIjc-Qlpmxy9k2kv-h6L8fOPSZvuGbhLPZM0mCNyr8MT1NICZJ1
-  audience: https://dev-flbjrn2syifzgmfm.us.auth0.com/api/v2/
-  login-redirect-uri: http://localhost:8080/api/session/callback
-  connection-redirect-uri: http://localhost:8080/api/auth/callback
+  domain: ${AUTH0_DOMAIN}
+  client-id: ${AUTH0_CLIENT_ID}
+  client-secret: ${AUTH0_CLIENT_SECRET}
+  audience: ${AUTH0_AUDIENCE}
+  login-redirect-uri: ${AUTH0_CALLBACK_URL}
+  connection-redirect-uri: ${AUTH0_CALLBACK_URL}
+
+gmail:
+  client-id: ${GOOGLE_CLIENT_ID}
+  client-secret: ${GOOGLE_CLIENT_SECRET}
+
+paystack:
+  secret-key: ${PAYSTACK_SECRET_KEY}
+  base-url: https://api.paystack.co
+
+google:
+  client-id: ${GOOGLE_CLIENT_ID}
+  client-secret: ${GOOGLE_CLIENT_SECRET}
+  redirect-uri: http://localhost:8080/api/auth/callback
+  calendar:
+    client-id: ${GOOGLE_CLIENT_ID}
+    client-secret: ${GOOGLE_CLIENT_SECRET}
 
 openai:
-  api-key: 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
+  api-key: ${OPENAI_API_KEY}
   model: gpt-4o
 
 agent:
   approval-threshold-ngn: 150000
   scan-interval-ms: 900000
 
-paystack:
-  secret-key: ${PAYSTACK_SECRET_KEY:sk_test_placeholder}
-
 app:
-  frontend-url: http://localhost:5173
+  frontend-url: ${FRONTEND_URL}
 
 encryption:
-  secret: remitti2026supersecretkey123456
-
-google:
-  client-id: 932189010970-j2oecvkaqfehtmdietqpthkib7og47nc.apps.googleusercontent.com
-  client-secret: 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
-  redirect-uri: http://localhost:8080/api/auth/callback
-  calendar:
-    client-id: 932189010970-j2oecvkaqfehtmdietqpthkib7og47nc.apps.googleusercontent.com
-    client-secret: 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
-
-logging:
-  file:
-    name: autoinvoice.log
+  secret: ${ENCRYPTION_SECRET}
