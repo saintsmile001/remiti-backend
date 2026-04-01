@@ -24,7 +24,6 @@ gmail:
   client-secret: ${GOOGLE_CLIENT_SECRET}
 
 paystack:
-  secret-key: ${PAYSTACK_SECRET_KEY}
   base-url: https://api.paystack.co
 
 google:
